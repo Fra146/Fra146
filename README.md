@@ -11,7 +11,17 @@ xargs -n1 -I % gh api repos/$user/$repo/actions/runs/% -X DELETE
 
 ### Reinstate the Microsoft extensions marketplace in VSCodium ([SOURCE](https://github.com/VSCodium/vscodium/issues/519#issuecomment-711469237))
 ~~~
-sed -i 's/open-vsx.org\/vscode\/gallery/marketplace.visualstudio.com\/_apis\/public\/gallery/g; s/open-vsx.org\/vscode\/item/marketplace.visualstudio.com\/items/g;' /usr/share/codium/resources/app/product.json
+mkdir -p ~/.config/VSCodium && cat > ~/.config/VSCodium/product.json <<EOF
+{
+  "nameShort": "Visual Studio Code",
+  "nameLong": "Visual Studio Code",
+  "extensionsGallery": {
+    "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+    "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
+    "itemUrl": "https://marketplace.visualstudio.com/items"
+  }
+}
+EOF
 ~~~
 
 ### Git Yolo ([SOURCE](https://github.com/atongen/yolo/blob/main/install.sh))
