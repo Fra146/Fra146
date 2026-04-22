@@ -1,3 +1,4 @@
+<img width="1500" height="142" alt="green_run_8fps" src="https://github.com/user-attachments/assets/8c9f7e4c-580c-4a7e-a0ac-ac52a6ebc9f4" />
 <img src="https://raw.githubusercontent.com/Fra146/Fra146/output/snake.svg" alt="Snake animation" />
 
 ## Useful Git, GitHub and Linux-related commands
